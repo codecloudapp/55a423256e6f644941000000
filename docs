@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />	
+	<title>Docs - CodeCloud</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- stylesheets -->
+	<link href="http://assets.kodekloud.io/sites/562956d86e6f640de4000000/d4af3f5629116142275a0d1d68f2859e/bootstrap.min.css" rel="stylesheet">
+	<link href="http://assets.kodekloud.io/sites/562956d86e6f640de4000000/d4af3f5629116142275a0d1d68f2859e/theme.css" rel="stylesheet">
+	<link href="http://assets.kodekloud.io/sites/562956d86e6f640de4000000/d4af3f5629116142275a0d1d68f2859e/animate.css" rel="stylesheet">
+
+	
+	<link href="/application.css" rel="stylesheet">
+
+	<!-- javascript -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://assets.kodekloud.io/sites/562956d86e6f640de4000000/d4af3f5629116142275a0d1d68f2859e/bootstrap.min.js"></script>
+	<script src="http://assets.kodekloud.io/sites/562956d86e6f640de4000000/d4af3f5629116142275a0d1d68f2859e/theme.js"></script>
+
+	<!-- javascript -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+
+	<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body id="docs" data-spy="scroll" data-target="#guide">
+	<div id="guide">
+		<h1 class="logo" style="padding:0px">
+			<a href="/" style=""><img src="http://assets.codecloudapp.com/sites/562956d86e6f640de4000000/image/png/1446833741000/cc_logo_square_docs.png" class="" alt="" style="width:150px">
+			    
+			</a>
+		</h1>
+		<ul class="menu nav">
+		    <li>
+			  	<a href="#intro">Introduction</a>
+			</li>
+            <li>
+			  	<a href="#getting-started">Getting Started</a>
+			</li>
+			<li>
+				<a href="#website">Managing Websites</a>
+				<ul class="nav">
+				    <li><a href="#website-create">Creating a Website</a></li>
+				    <li><a href="#website-clone">Cloning a Website</a></li>
+				    <li><a href="#website-archive">Archiving a Website</a></li>
+				    <li><a href="#website-delete">Deleting a Website</a></li>
+				    <li><a href="#websites-thumb">Website Thumbnails</a></li>
+			  	</ul>
+			</li>
+			<li>
+				<a href="#editor">CodeCloud Editor</a>
+				<ul class="nav">
+				    <li><a href="#editor-content">Files & Content</a></li>
+				    <li><a href="#editor-file-types">File Types (CSS, JS, SaSS)</a></li>
+				    <li><a href="#editor-uploads">Uploads</a></li>
+				    <li><a href="#editor-saving-publishing">Saving and Publishing</a></li>
+				    <li><a href="#websites-file-settings">File Settings</a></li>
+			  	</ul>
+			</li>
+			<li>
+				<a href="#site-settings">Website Settings</a>
+				<ul class="nav">
+				    <li><a href="#site-settings-general">General</a></li>
+				    <li><a href="#site-settings-dns">Adding a URL & Domain</a></li>
+				    <li><a href="#site-settings-301">301 Redirects</a></li>
+				    <li><a href="#site-settings-seo">SEO</a></li>
+				    <li><a href="#site-settings-versions">Versions</a></li>
+				    <li><a href="#site-settings-key-value-pairs">Key Value Pairs</a></li>
+			  	</ul>
+			</li>
+			<li>
+				<a href="#team">Team Management</a>
+				<ul class="nav">
+				    <li><a href="#team-general">General</a></li>
+				    <li><a href="#team-invite">Inviting New Members</a></li>
+				    <li><a href="#team-roles">Team Member Roles</a></li>
+				    <li><a href="#team-disable">Disabling Team Members</a></li>
+				    <li><a href="#team-create">Creating a Team</a></li>
+			  	</ul>
+			</li>
+			<li>
+				<a href="#integrations">Integrations</a>
+				<ul class="nav">
+				    <li><a href="#integrations-slack">Slack</a></li>
+				    <li><a href="#integrations-github">GitHub</a></li>
+				    <li><a href="#integrations-browserstack">BrowserStack</a></li>
+				    <li><a href="#integrations-more">More to come..</a></li>
+			  	</ul>
+			</li>
+			<li>
+			  	<a href="#billing">Billing & Plans</a>
+			</li>
+			<li>
+			  	<a href="#support">Support</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="api-docs">
+		<div id="methods"  style="background-color:#FFF">
+			<div class="languages">
+				<a class="language selected" data-lang="ruby" href="#">Copyright 2015</a>
+				
+			</div>
+			<div class="method" id="intro">
+				<div class="method-section clearfix">
+					<div class="method-description">
+					    
+						<h2>Introduction</h2>
+						<p>
+							Welcome to <a href="/">CodeCloud</a>, the website builder for developers....by developers. Our team has developed CodeCloud from our own need to develop, manage, and support many websites and mobile apps for hunderds of clients. Most website builders today focus on abstracting the code away from users by providing WYSIWYG (What You See Is What You Get) interfaces for quick and simple websites. While these tools provide a good set of website management tools they often don't allow users to access the HTML/Javascrip/CSS code, use the Javascript and CSS frameworks they want, or generate a website that is focused on performance and speed. Our goal with CodeCloud is to bridge the gap between traditional website builders and complicated website deployments. To do this we have focused on <u>3 core aspects</u>:
+						</p> 
+						<p>
+							<ul>
+							    <li><b>Flexibility</b>
+							        <p>Amazing web frameworks such as 
+							        <a href="http://www.getbootstrap.com" target="_blank">Bootstrap</a>,  <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>, <a href="https://angularjs.org/" target="_blank">Angular.js</a>, <a href="http://backbonejs.org/" target="_blank">Backbone.js</a>, <a href="http://facebook.github.io/react/" target="_blank">React.js</a> and many more are redefining website development making HTML/Javascript/CSS apps more powerful than ever. CodeClode provides the flexibility to add any framework to your websites with ease. With CodeCloud you have the flexibility to write the code you want with the frameworks you want, create multiple versions & clone sites, and to provide easy access for your team to manage your websites.</p>
+							        
+							        
+							    </li>
+							    <li><b>Performance</b><p>
+							        A website's speed & performance matters more than ever. Most users now access the web over a mobile device and search engines such as <a href="http://www.shoutmeloud.com/google-started-ranking-websites-based-on-load-time-and-speed.html" target="_blank">Google</a> and Bing now rank websites in search results primarily based on the websites speed. CodeCloud puts a strong focus on performance by compressing (minify) published files, using templates that have clean code with a focus on performance, and by using the fastest CDNs and databases in the world.
+							        
+							    </p></li>
+							    <li><b>Integrations</b><p>We know what you are thinking.....can I write server side code (ruby, php etc) in CodeCloud? CodeCloud is designed to be an HTML/JS/CSS development platform only. By focusing purely on clientside code we have placed a strong focus on integrations. Online SaaS (Software as a Service) platforms such as <a href="https://parse.com/" target="_blank">Parse</a>, <a href="https://aws.amazon.com/" target="_blank">Amazon Web Services</a>, <a href="http://mailchimp.com/" target="_blank">Mail Chimp</a>, <a href="https://developers.google.com/" target="_blank">Google Developer</a> and many more have changed the way apps are created. By providing the flexibility to use any web framework such as angular, backbone, react etc you can integrate your pure web code with a number of services. As Javascript and CSS frameworks continue to innovate a stronger focus on client side development has emerged. We are working hard on integrations for your websites and development process.
+							    </p>       
+							    </li>
+							</ul>
+						</p>
+					</div>
+					<div class="method-example">
+                        <pre>
+                            <code class="ruby">
+                                <center>
+                                <img src="http://assets.kodekloud.io/sites/562956d86e6f640de4000000/image/png/1445022729000/cc_logo_vert.png" class="" alt="" style="width:400px"><br><br>
+                                 <img src="http://assets.kodekloud.io/sites/562956d86e6f640de4000000/d4b9853de5303a7ba84d55ee9d8b14a0/Its-all-about-Speed2.png" class="" alt="" style="width:400px">
+                                </center>
+                            </code>
+                        </pre>
+					</div>
+				</div>
+			</div>
+			<div class="method" id="getting-started">
+				<div class="method-section clearfix">
+					<div class="method-description">
+						<h3>Getting Started</h3>
+						<p>
+							CodeCloud is designed to make creating, managing and editing your websites as easy as possible while still providing full control over your website and its code. To get started with CodeCloud please follow these steps:
+							<ul>
+							    <li>
+							        <b>1) Create or Join a Team</b><p>CodeCloud accounts are team centric. If you are creating a new team for yourself or your company please go to the register page <a href="https://web.codecloudapp.com/sign-up" target="_blank">here</a>. If your team admin has already created a team they can invite you to join the team. Once invited you will recieve an email to join. The email will include a link to join the team where you will be prompted to create an account. For more information on teams press <a href="#team">here</a>.
+							        </p>
+							    </li>
+							    <li>
+							        <b>2) Dashboard</b><p>Once you have created or joined a team you will be directed to your team's dashboard. From here you will be able to manage your team's <a href="#website">websites</a>, manage your <a href="#team">team members</a>, manage your team's <a href="#integrations">integrations</a>, and manage your team's <a href="#billing">billing & plans</a>.							        </p>
+							    </li>
+							    <li>
+							        <b>3) New Website</b><p>The 'Websites' tab in the dashboard is where all your websites will be listed. This is where you can create your first website by pressing the '+ New Website' button. From here you will be directed to select a template for your website. Once selected you will be directed to the 'CodeCloud Editor'. The 'CodeCloud Editor' is the interface where you will develop, edit and manage your website and it's code. For more more information on the 'CodeCloud Editor' please go <a href="#editor">here</a>.							        </p>
+							    </li>
+							    <li>
+							        <b>4) Writing Code - CodeCloud Editor</b>
+							        <p>The CodeCloud Editor is your primary interface to develop & code your website. From here you can access webpages, create new ones, upload images and files and manage site settings. The CodeCloud editor allows you to make changes and view them in an 'unpublished' state before making your changes live. For more detailed information on the CodeCloud Editor please go <a href="#editor">here</a>.
+							        
+							            
+							        </p>
+							    </li>
+							</ul>
+						</p>
+					</div>
+					<div class="method-example">
+                        <pre>
+                        <code class="ruby">
+                            <center>
+                            <h5>Dashboard</h5>
+                            <img src="http://assets.codecloudapp.com/sites/562956d86e6f640de4000000/image/png/1446764085000/Screen Shot 2015-11-05 at 5.54.36 PM.png" class="" alt="" style="width:450px;border-radius:3px">
+                            <br>
+                            <h5>CodeCloud Editor</h5>
+                            <img src="http://assets.codecloudapp.com/sites/562956d86e6f640de4000000/image/png/1446997637000/Screen Shot 2015-11-08 at 10.47.09 AM.png" class="" alt="" style="width:450px;radius:5px">
+                                
+                                
+                                
+                                
+                            </center>
+                           
+                        </code>
+                        </pre>
+					</div>
+				</div>
+			</div>
+			<div class="method" id="website">
+				<div class="method-section clearfix">
+					<div class="method-description">
+						<h3>Managing Websites</h3>
+						<p>
+							CodeClode is designed to make manging your websites for you and your team as easy as possible. Traditionally websites have been managed with complicated deployment, FTP file uploads and copying folders and files. With CodeCloud you can easily manage all of your websites in one place, create versions and copies with ease, and edit and manage your code right in the cloud. Below are a list of the primary activities for managing your sites.
+						</p> 
+						<div class="info" id="website-create">
+							<h4>Creating a Website</h4>
+							<ul style="color:#777;font-weight:300">
+							    <li>
+							        <b>1) Go to your team's dashboard</b>
+							    </li>
+							    <li>
+							        <b>2) Press the 'Websites' Tab</b>
+							    </li>
+							    <li>
+							        <b>3) Press the '+ New Website' button</b>
+							    </li>
+							    <li>
+							        <b>4) Select a template from the template list, there is a 'Blank' template if you would like and empty website</b>
+							    </li>
+							    <li>
+							        <b>5) Select a template from the template list, there is a 'Blank' template if you would like and empty website</b>
+							    </li>
+							    <li>
+							        <b>6) Enter a name for your website and press the 'Clone Website' button</b>
+							    </li>
+							</ul>
+						</div>
+						<div class="info" id="website-clone">
+							<h4>Cloning a Website</h4>
+							<p>You can clone one of your existing sites to easily create a copy of it.</p>
+							<ul style="color:#777;font-weight:300">
+							    <li>
+							        <b>1) Go to your team's dashboard</b>
+							    </li>
+							    <li>
+							        <b>2) Press the 'Websites' Tab to view the list of your websites</b>
+							    </li>
+							    <li>
+							        <b>3) Hover over the website you would like to clone and press the clone site button</b>
+							    </li>
+							    <li>
+							        <b>4) Enter the name of the new website and press the 'Clone Website' button</b>
+							    </li>
+							</ul>
+							
+						</div>
+						<div class="info" id="website-archive">
+							<h4>Archiving a Website</h4>
+							<ul style="color:#777;font-weight:300">
+							    <li>
+							        <b>1) Go to your team's dashboard</b>
+							    </li>
+							    <li>
+							        <b>2) Press the 'Websites' Tab to view the list of your websites</b>
+							    </li>
+							    <li>
+							        <b>3) Hover over the website you would like to archive and press the archive (garbage can) button</b>
+							    </li>
+							    <li>
+							        <b>4) Archived sites will be listed below your active sites and will not count towards your billing & plans</b>
+							    </li>
+							</ul>
+						</div>
+						<div class="info" id="website-delete">
+							<h4>Deleting a Website</h4>
+							<ul style="color:#777;font-weight:300">
+							    <li>
+							        <b>1) Go to your team's dashboard</b>
+							    </li>
+							    <li>
+							        <b>2) Press the 'Websites' Tab to view the list of your websites</b>
+							    </li>
+							    <li>
+							        <b>3) To permanently delete a website you must archive it first. Please follow the steps above to archive the site.</b>
+							    </li>
+							    <li>
+							        <b>4) Hover over the archived site in the 'Acrhived Sites' section at the bottom of the website list. Press the 'Delete Forever' button</b>
+							    </li>
+							</ul>
+						</div>
+						<div class="info" id="websites-thumb">
+							<h4>Website Thumbnails</h4>
+							<p>The thumbnail for your website is generated using URL2PNG. To update this thumbnail to reflect latest changes press please follow the following steps.</p>
+							<ul style="color:#777;font-weight:300">
+							    <li>
+							        <b>1) Go to your team's dashboard</b>
+							    </li>
+							    <li>
+							        <b>2) Press the 'Websites' Tab to view the list of your websites</b>
+							    </li>
+							    <li>
+							        <b>3) Hover over the site you want to refresh the thumbnail for and press the refresh button</b>
+							    </li>
+							</ul>
+						</div>
+					</div>
+					<div class="method-example">
+<pre>
+                            <code class="ruby">
+                            <center>
+                                <h5>Create Website</h5>
+                                <img src="http://assets.codecloudapp.com/sites/562956d86e6f640de4000000/image/png/1447086981000/Screen Shot 2015-11-09 at 11.36.17 AM.png" class="" alt="" style="width:400px">
+                                <br>
+                                <h5>Clone Website</h5>
+                               
+                                <img src="http://assets.codecloudapp.com/sites/562956d86e6f640de4000000/image/png/1447090617000/Screen Shot 2015-11-09 at 12.36.52 PM.png" class="" alt="" style="width:400px">
+                                 </center>
+                            </code>
+                           
+                        </pre>
+					</div>
+				</div>
+			</div>
+			<div class="method" id="editor">
+				<div class="method-section clearfix">
+					<div class="method-description">
+						<h3>Coding Websites</h3>
+						<p>
+							Documentation Coming Soon...
+						</p>
+						<div class="info" id="editor-content">
+							<h4>Files & Content</h4>
+							<p>Documentation Coming Soon...</p>
+						</div>
+						<div class="info" id="editor-file-types">
+							<h4>File Types (CSS, JS, SaSS)</h4>
+							<p>Documentation Coming Soon...</p>
+						</div>
+						<div class="info" id="editor-uploads">
+							<h4>Uploads</h4>
+							<p>Documentation Coming Soon...</p>
+						</div>
+						<div class="info" id="editor-saving-publishing">
+							<h4>Saving and Publishing</h4>
+							<p>Documentation Coming Soon...</p>
+						</div>
+						<div class="info" id="websites-file-settings">
+							<h4>File Settings</h4>
+							<p>Documentation Coming Soon...</p>
+						</div>
+					</div>
+					<div class="method-example">
+<pre>
+<code class="ruby">React::User.create(
+  :name => "John McClane",
+  :email => "john_mcclane@awesome.com",
+  :country => "US",
+  :some_key => "yey_JA390094AWPIWWN435",
+  :age => 53
+)
+</code><code class="python">react.User.create(
+  name="John McClane",
+  email="john_mcclane@awesome.com",
+  country="US",
+  some_key="yey_JA390094AWPIWWN435",
+  age=53
+)
+</code><code class="php">React_User::create(array(
+  "name" => "John McClane",
+  "email" => "john_mcclane@awesome.com",
+  "country" => "US",
+  "some_key" => "yey_JA390094AWPIWWN435",
+  "age" => 53
+));
+</code>
+<code class="ruby always-visible"># Object Response
+{
+  "object": "User",
+  "name": "John McClane",
+  "email": "john_mcclane@awesome.com",
+  "country": "US",
+  "some_key": "yey_JA390094AWPIWWN435",
+  "age": 53
+  "address": {
+    "address_line1": null,
+    "address_line2": null,
+    "address_city": null,
+    "address_state": null,
+    "address_zip": null,
+    "address_country": null
+  }
+  "valid": true,
+  "description": null
+}
+</code>
+</pre>
+					</div>
+				</div>
+			</div>
+			<div class="method" id="site-settings">
+				<div class="method-section clearfix">
+					<div class="method-description">
+						<h3>Website Settings</h3>
+						<p>
+							Website settings are accessed through the CodeCloud editor by pressing the 'Site Settings' button at the bottom of the screen. Website settings allow you to configure key aspects of your website including multiple versions. Note: some site settings are common amongst all versions while some are not. Please see inline documentation for details.
+						</p>
+						
+						<div class="info" id="site-settings-dns">
+							<h4>Adding a URL & Domain</h4>
+							<p>Documentation Coming Soon...</p>
+						</div>
+						<div class="info" id="site-settings-301">
+							<h4>301 Redirects</h4>
+							<p>Documentation Coming Soon...</p>
+						</div>
+						<div class="info" id="site-settings-seo">
+							<h4>SEO</h4>
+							<p>Documentation Coming Soon...</p>
+						</div>
+						<div class="info" id="site-settings-versions">
+							<h4>Versions</h4>
+							<p>Documentation Coming Soon...</p>
+						</div>
+						<div class="info" id="site-settings-key-value-pairs">
+							<h4>Key Value Pairs</h4>
+							<p>Documentation Coming Soon...</p>
+						</div>
+					</div>
+					<div class="method-example">
+<pre>
+<code class="ruby">React::Order.create(
+  :item => "React Bootstrap Theme",
+  :price => 1500,
+  :name => "John McClane",
+  :email => "john_mcclane@awesome.com",
+  :country => "US",
+  :some_key => "yey_JA390094AWPIWWN435",
+  :age => 53
+)
+</code><code class="python">react.User.create(
+  item="React Bootstrap Theme",
+  price=1500,
+  name="John McClane",
+  email="john_mcclane@awesome.com",
+  country="US",
+  some_key="yey_JA390094AWPIWWN435",
+  age=53
+)
+</code><code class="php">React_User::create(array(
+  "item" => "React Bootstrap Theme",
+  "price" => 1500,
+  "name" => "John McClane",
+  "email" => "john_mcclane@awesome.com",
+  "country" => "US",
+  "some_key" => "yey_JA390094AWPIWWN435",
+  "age" => 53
+));
+</code>
+<code class="ruby always-visible"># Object Response
+{
+  "object": "Order",
+  "item": "React Bootstrap Theme",
+  "price": 1500,
+  "name": "John McClane",
+  "email": "john_mcclane@awesome.com",
+  "country": "US",
+  "some_key": "yey_JA390094AWPIWWN435",
+  "age": 53
+  "address": {
+    "address_line1": null,
+    "address_line2": null,
+    "address_city": null,
+    "address_state": null,
+    "address_zip": null,
+    "address_country": null
+  }
+  "valid": true,
+  "description": null
+}
+</code>
+</pre>
+					</div>
+				</div>
+			</div>
+			<div class="method" id="team">
+				<div class="method-section clearfix">
+					<div class="method-description">
+						<h3>Team Management</h3>
+						<p>Team management is a crutial aspect of any organization, particularly when managing websites and apps. Whether your business has internal websites or builds websites for clients CodeCloud provides a powerful set of tools to manage your team.</p>
+					
+						<div class="info" id="team-invite">
+							<h4>Inviting New Members</h4>
+							<ul style="color:#777;font-weight:300">
+							    <li>
+							        <b>1) Go to your team's dashboard</b>
+							    </li>
+							    <li>
+							        <b>2) Press the 'Team' Tab to view the list of your current team members</b>
+							    </li>
+							    <li>
+							        <b>3) Press the 'Invite Team Members' button</b>
+							    </li>
+							    <li>
+							        <b>4) Enter the email addresses of the users you wish to invite.</b>
+							    </li>
+							</ul>
+							<p>Users may belong to one or many different teams with the same email address</p>
+						</div>
+						<div class="info" id="team-roles">
+							<h4>Team Member Roles</h4>
+							<p>Team member roles can be updated in the 'Team' section of your team Dashboard. There are 3 primary roles for a team member.</p>
+							<ul style="color:#777;font-weight:300">
+							    <li>
+							        <b>Owner</b>
+							        <p>There must be at least one owner per team. Owners have access to view, develop and delete all web sites for your team. Owners can manage team members and settings. Owners can manage plans & billing.</p>
+							    </li>
+							    <li>
+							        <b>Admin</b>
+							        <p>Admins have access to view, develop and delete all web sites for your team. Admins can manage team members and settings. Admins can manage plans & billing.</p>
+							    </li>
+							    <li>
+							        <b>Developer</b>
+							        <p>Developers have access to view, edit and develop all websites for your team. Developers can update site settings. Developers cannot manage team members or plans & billing.</p>
+							    </li>
+							</ul>
+						</div>
+						<div class="info" id="team-disable">
+							<h4>Disabling Team Members</h4>
+							<p>Disabled team members can no longer access your team or it's websites. Disabled team members will not count towards your Billing & Plan for your team.</p> <p>To disabled a team member go to the 'Team' tab in the dashboard. Select the team member you wish to disable and press the 'Disable Account' button.</p>
+						</div>
+						<div class="info" id="team-create">
+							<h4>Creating a Team</h4>
+							<p>Creating a new team is simple and easy. It may be useful to create distinct teams for different client websites if you work with a variety of clients and team members. It also may be helpful to create teams specifically for projects or deperatments within your organization.</p>
+							
+							<p>To create a new team go to the 'Team' tab in your current team's dashboar and press the '+ New Team' button. Note: The same user account email and login can be associated with multiple teams.</p>
+						</div>
+						
+					</div>
+					<div class="method-example">
+<pre>
+<code class="http always-visible">200 OK - Everything worked.
+
+400 Bad Request - The request was badly built
+
+401 Unauthorized - Some other message
+
+402 Request Failed - The request failed
+
+404 Not Found - Doesn't exist
+
+500, 502, 503, 504 Server errors
+</code>
+</pre>
+					</div>
+				</div>
+			</div>
+			<div class="method" id="integrations">
+				<div class="method-section clearfix">
+					<div class="method-description">
+						<h3>Integrations</h3>
+						<p>
+							We intend integrations to be an important part of CodeCloud going forward. CodeCloud is designed to be an HTML/JS/CSS development platform only. By focusing purely on client side code we have placed a strong focus on integrations. Online SaaS (Software as a Service) platforms such as <a href="https://parse.com/" target="_blank">Parse</a>, <a href="https://aws.amazon.com/" target="_blank">Amazon Web Services</a>, <a href="http://mailchimp.com/" target="_blank">Mail Chimp</a>, <a href="https://developers.google.com/" target="_blank">Google Developer</a> and many more have changed the way apps are created. By providing the flexibility to use any web framework such as angular, backbone, react etc you can integrate your pure web code with a number of services. As Javascript and CSS frameworks continue to innovate a stronger focus on client side development has emerged. We are working hard on integrations for your websites and development process. To start we have launched with 3 key integrations.
+						</p>
+						<div class="info" id="integrations-slack">
+							<h4>Slack</h4>
+							<p>Slack brings all your communication together in one place. Keep up to date with you team's actvites by having events posted to your teams slack channels. Events include: Site creation/deletion/publishing, version and status updates and team member activity. For more information on Slack's incoming webhooks please press <a href="https://api.slack.com/incoming-webhooks" target="_blank">here</a>.</p>
+						</div>
+						<div class="info" id="integrations-github">
+							<h4>GitHub</h4>
+							<p>Powerful collaboration, code review, and code management. Automatically save and track all code changes by adding a github integration. Any saved file will also save to GitHub with one click access to any version of your code.</p>
+						</div>
+						<div class="info" id="integrations-browserstack">
+							<h4>BrowserStack</h4>
+							<p>Test your sites with instant access to all desktop and mobile browsers. Test your websites on any browser with ease by opening pages and websites in any browser and operating system. Once integrated, Browser Stack is one click away from your code editor to test quickly for any page or site.</p>
+						</div>
+						<div class="info" id="integrations-more">
+							<h4>More to come..</h4>
+							<p>Integrations are the backbone of modern development. We have a dedicated team working on integrations, stay tuned for more to come.</p>
+						</div>
+						
+					</div>
+					<div class="method-example">
+                        <pre>
+                        <code class="http always-visible">
+                            <center>
+                            <img src="http://assets.codecloudapp.com/sites/562956d86e6f640de4000000/image/png/1443449219000/slack-2014.png" class="" alt="" style="width:400px;">
+                            <img src="http://assets.codecloudapp.com/sites/562956d86e6f640de4000000/image/png/1443470789000/github-512.png" class="" alt="" style="width:400px;">
+                            </center>
+                        
+                        </code>
+                        </pre>
+					</div>
+				</div>
+			</div>
+			<div class="method" id="billing">
+				<div class="method-section clearfix">
+					<div class="method-description">
+						<h3>Billing & Plans</h3>
+						<p>
+							CodeCloud is a SaaS (Software as a Service) based application that requires no contract and can be cancelled anytime. Billing for CodeCloud is team centric which means that for each active team a monthly subscription is required after the 30 day trial is complete. Each team must have at least one team 'owner' which is resposnile for managing the team's billing & plans. By default the team owner is the user who registered the account however this can be changed in the 'Team' section in the dashboard. For more information on pricing please visit <a href="/pricing" target="_blank">here</a>. 
+						</p> 
+						<p>
+							To access your team's 'Billing & Plans' please see the 'Billing & Plans' tab in the team dashboard. From the Billing & Plan's section you can:
+								<ul >
+							    <li>
+							       - Select, Upgrade or Downgrade your plan
+							    </li>
+							    <li>
+							       - Cancel your plan :-(</b>
+							    </li>
+							    <li>
+							       - View payment history
+							    </li>
+							    <li>
+							       - Update Credit Card information
+							    </li>
+							</ul>
+						</p>
+					</div>
+					<div class="method-example">
+<pre>
+<code class="ruby">
+    <center>
+     
+</center>
+    
+</code><code class="python"># All this code is just for demonstration purposes
+
+react.api_key = "In here goes your api key!"</code><code class="php"># All this code is just for demonstration purposes
+
+React::setApiKey("In here goes your api key!");</code>
+</pre>
+					</div>
+				</div>
+			</div>
+			<div class="method" id="support">
+				<div class="method-section clearfix">
+					<div class="method-description">
+						<h3>Support</h3>
+						<p>
+							CodeCloud is proud to offer 24/7 support.</p> <p>To reach us online please email us at <a href="mailto:support@codecloudhelp.zendesk.com">here.</a>
+						</p> 
+						
+					</div>
+					<div class="method-example">
+<pre>
+<code class="ruby">
+    <center>
+     
+</center>
+    
+</code><code class="python"># All this code is just for demonstration purposes
+
+react.api_key = "In here goes your api key!"</code><code class="php"># All this code is just for demonstration purposes
+
+React::setApiKey("In here goes your api key!");</code>
+</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<script type="text/javascript">
+		$(function () {
+			hljs.configure({
+			  tabReplace: '  ',
+			  classPrefix: ''
+			})
+			hljs.initHighlightingOnLoad();
+
+
+			// language toggle
+			var $languages = $(".languages .language");
+			$languages.click(function (e) {
+				e.preventDefault();
+				var lang = $(this).data("lang");
+				$languages.removeClass("selected");
+				$(this).addClass("selected");
+
+				$("pre code").hide();
+				$("pre code." + lang).css("display", "block");
+			});
+		});
+	</script>
+</body>
+</html>
