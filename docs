@@ -338,48 +338,7 @@
 					</div>
 					<div class="method-example">
 <pre>
-<code class="ruby">React::User.create(
-  :name => "John McClane",
-  :email => "john_mcclane@awesome.com",
-  :country => "US",
-  :some_key => "yey_JA390094AWPIWWN435",
-  :age => 53
-)
-</code><code class="python">react.User.create(
-  name="John McClane",
-  email="john_mcclane@awesome.com",
-  country="US",
-  some_key="yey_JA390094AWPIWWN435",
-  age=53
-)
-</code><code class="php">React_User::create(array(
-  "name" => "John McClane",
-  "email" => "john_mcclane@awesome.com",
-  "country" => "US",
-  "some_key" => "yey_JA390094AWPIWWN435",
-  "age" => 53
-));
-</code>
-<code class="ruby always-visible"># Object Response
-{
-  "object": "User",
-  "name": "John McClane",
-  "email": "john_mcclane@awesome.com",
-  "country": "US",
-  "some_key": "yey_JA390094AWPIWWN435",
-  "age": 53
-  "address": {
-    "address_line1": null,
-    "address_line2": null,
-    "address_city": null,
-    "address_state": null,
-    "address_zip": null,
-    "address_country": null
-  }
-  "valid": true,
-  "description": null
-}
-</code>
+
 </pre>
 					</div>
 				</div>
@@ -415,56 +374,7 @@
 					</div>
 					<div class="method-example">
 <pre>
-<code class="ruby">React::Order.create(
-  :item => "React Bootstrap Theme",
-  :price => 1500,
-  :name => "John McClane",
-  :email => "john_mcclane@awesome.com",
-  :country => "US",
-  :some_key => "yey_JA390094AWPIWWN435",
-  :age => 53
-)
-</code><code class="python">react.User.create(
-  item="React Bootstrap Theme",
-  price=1500,
-  name="John McClane",
-  email="john_mcclane@awesome.com",
-  country="US",
-  some_key="yey_JA390094AWPIWWN435",
-  age=53
-)
-</code><code class="php">React_User::create(array(
-  "item" => "React Bootstrap Theme",
-  "price" => 1500,
-  "name" => "John McClane",
-  "email" => "john_mcclane@awesome.com",
-  "country" => "US",
-  "some_key" => "yey_JA390094AWPIWWN435",
-  "age" => 53
-));
-</code>
-<code class="ruby always-visible"># Object Response
-{
-  "object": "Order",
-  "item": "React Bootstrap Theme",
-  "price": 1500,
-  "name": "John McClane",
-  "email": "john_mcclane@awesome.com",
-  "country": "US",
-  "some_key": "yey_JA390094AWPIWWN435",
-  "age": 53
-  "address": {
-    "address_line1": null,
-    "address_line2": null,
-    "address_city": null,
-    "address_state": null,
-    "address_zip": null,
-    "address_country": null
-  }
-  "valid": true,
-  "description": null
-}
-</code>
+
 </pre>
 					</div>
 				</div>
@@ -525,18 +435,7 @@
 					</div>
 					<div class="method-example">
 <pre>
-<code class="http always-visible">200 OK - Everything worked.
 
-400 Bad Request - The request was badly built
-
-401 Unauthorized - Some other message
-
-402 Request Failed - The request failed
-
-404 Not Found - Doesn't exist
-
-500, 502, 503, 504 Server errors
-</code>
 </pre>
 					</div>
 				</div>
